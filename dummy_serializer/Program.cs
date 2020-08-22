@@ -64,10 +64,10 @@ namespace dummy_serializer
 
     //Or decorate
     //[BsonSerializer(typeof(DummySerializer))]
-    public struct Dummy
+    public readonly struct Dummy
     {
-        public string Prop1 { get; set; }
-        public string Prop2 { get; set; }
+        public string Prop1 { get; }
+        public string Prop2 { get; }
 
         [BsonConstructor]
         public Dummy(string p1, string p2)
